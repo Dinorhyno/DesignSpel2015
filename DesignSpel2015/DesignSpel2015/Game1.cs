@@ -250,7 +250,7 @@ namespace DesignSpel2015
                 if (smoke[i].timer <= 0) smoke.RemoveAt(i);
             }
             camera.Update(gameTime, this);
-
+            camera.shake = true;
             base.Update(gameTime);
         }
 
