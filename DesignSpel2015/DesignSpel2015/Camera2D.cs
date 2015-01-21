@@ -16,6 +16,7 @@ namespace DesignSpel2015
         Viewport view;
         public Vector2 centre;
         public bool shake;
+        public Random r;
 
         public Camera2D(Viewport newView)
         {
@@ -23,6 +24,7 @@ namespace DesignSpel2015
         }
         public void Update(GameTime gametime, Game1 spritePosition)
         {
+            //dix
             if (!shake)
             centre = new Vector2(spritePosition.playerPos.X + (spritePosition.playerTex.Width /2) - 300, 0);
             if (shake)
