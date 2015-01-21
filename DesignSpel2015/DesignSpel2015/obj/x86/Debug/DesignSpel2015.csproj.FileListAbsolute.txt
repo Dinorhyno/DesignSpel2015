@@ -1,0 +1,14 @@
+c:\users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\DesignSpel2015.exe
+c:\users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\DesignSpel2015.pdb
+c:\users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\obj\x86\Debug\DesignSpel2015.csprojResolveAssemblyReference.cache
+c:\users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\obj\x86\Debug\DesignSpel2015.exe
+c:\users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\obj\x86\Debug\DesignSpel2015.pdb
+C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\PimpBox.xnb
+C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\Bullet.xnb
+C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\BcgStreet.xnb
+C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\EnemyBox.xnb
+C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\smoke.xnb
+C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\hitBox.xnb
+C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\Hpbar.xnb

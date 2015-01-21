@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignSpel2015", "DesignSpel2015\DesignSpel2015\DesignSpel2015.csproj", "{8DDB1A0B-01F5-4377-9DB9-CC8BC86BE661}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "DesignSpel2015Content", "DesignSpel2015\DesignSpel2015Content\DesignSpel2015Content.contentproj", "{D44FE4AC-187D-4665-A7A7-512B02A551EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DDB1A0B-01F5-4377-9DB9-CC8BC86BE661}.Debug|x86.ActiveCfg = Debug|x86
+		{8DDB1A0B-01F5-4377-9DB9-CC8BC86BE661}.Debug|x86.Build.0 = Debug|x86
+		{8DDB1A0B-01F5-4377-9DB9-CC8BC86BE661}.Release|x86.ActiveCfg = Release|x86
+		{8DDB1A0B-01F5-4377-9DB9-CC8BC86BE661}.Release|x86.Build.0 = Release|x86
+		{D44FE4AC-187D-4665-A7A7-512B02A551EA}.Debug|x86.ActiveCfg = Debug|x86
+		{D44FE4AC-187D-4665-A7A7-512B02A551EA}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
