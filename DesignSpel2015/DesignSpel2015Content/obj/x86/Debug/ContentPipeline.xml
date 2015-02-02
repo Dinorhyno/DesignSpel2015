@@ -73,16 +73,61 @@
       <Output>C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\Hpbar.xnb</Output>
       <Time>2015-01-14T10:38:36.788751+01:00</Time>
     </Item>
+    <Item>
+      <Source>Gun_Shot-Marvin-1140816320.wav</Source>
+      <Name>shotReg</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\shotReg.xnb</Output>
+      <Time>2015-01-26T08:59:01.3953119+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Woosh-Mark_DiAngelo-4778593.wav</Source>
+      <Name>Swing</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\Swing.xnb</Output>
+      <Time>2015-01-26T13:51:53.3425234+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Realistic_Punch-Mark_DiAngelo-1609462330.wav</Source>
+      <Name>Punch</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\Punch.xnb</Output>
+      <Time>2015-01-26T13:52:00.9514021+01:00</Time>
+    </Item>
+    <Item>
+      <Source>swag.png</Source>
+      <Name>swag</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\swag.xnb</Output>
+      <Time>2015-02-02T08:41:32.6305194+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Char(Still).png</Source>
+      <Name>Char(Still)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\Char(Still).xnb</Output>
+      <Time>2015-02-02T08:43:14.5391754+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

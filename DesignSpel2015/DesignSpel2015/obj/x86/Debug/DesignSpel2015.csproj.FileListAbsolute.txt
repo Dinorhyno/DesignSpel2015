@@ -12,3 +12,8 @@ C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\Design
 C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\smoke.xnb
 C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\hitBox.xnb
 C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\Hpbar.xnb
+C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\shotReg.xnb
+C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\Swing.xnb
+C:\Users\sul13adavid\documents\visual studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\Punch.xnb
+C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\swag.xnb
+C:\Users\sul13adavid\Documents\Visual Studio 2010\Projects\DesignSpel2015\DesignSpel2015\DesignSpel2015\bin\x86\Debug\Content\Char(Still).xnb

@@ -32,11 +32,14 @@ namespace DesignSpel2015
         int reloadTime1 =  50;
         int punchTimer;
         bool reload1 = false;
+        SoundEffect shotReg;
         public List<Smoke> smoke;
         Texture2D smokeTex;
 
         List<Punch> punch;
-        Texture2D pt;
+        Texture2D pTex;
+        SoundEffect SwingSound;
+        SoundEffect HitSound;
 
         List<EnemyType1> Enemy1;
         Texture2D enemyTex;
@@ -45,6 +48,7 @@ namespace DesignSpel2015
 
         int VSpeed = 2;
         int HSpeed = 5;
+        public bool movement;
 
         KeyboardState ks;
         KeyboardState prevKs;
@@ -52,6 +56,10 @@ namespace DesignSpel2015
         Texture2D texHpBar;
 
         Camera2D camera;
+        int shakeTimer;
+
+        List<Civilian> civ;
+        int civTimer = 100;
 
         public SpriteFont GameFont;
 
@@ -72,12 +80,13 @@ namespace DesignSpel2015
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            playerPos = new Vector2(100, 400);
+            playerPos = new Vector2(100, 600);
             Bullet1 = new List<BulletReg>();
             Enemy1 = new List<EnemyType1>();
             smoke = new List<Smoke>();
             punch = new List<Punch>();
             camera = new Camera2D(GraphicsDevice.Viewport);
+            civ = new List<Civilian>();
             base.Initialize();
         }
 
@@ -89,14 +98,17 @@ namespace DesignSpel2015
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            playerTex = Content.Load<Texture2D>("PimpBox");
+            playerTex = Content.Load<Texture2D>("Char(Still)");
             bullet1Tex = Content.Load<Texture2D>("Bullet");
             Back1Tex = Content.Load<Texture2D>("BcgStreet");
             enemyTex = Content.Load<Texture2D>("EnemyBox");
             GameFont = Content.Load<SpriteFont>("SpriteFont1");
             smokeTex = Content.Load<Texture2D>("smoke");
-            pt = Content.Load<Texture2D> ("hitBox");
+            pTex = Content.Load<Texture2D> ("hitBox");
             texHpBar = Content.Load<Texture2D>("Hpbar");
+            shotReg = Content.Load<SoundEffect>("shotReg");
+            SwingSound = Content.Load<SoundEffect>("Swing");
+            HitSound = Content.Load<SoundEffect>("Punch");
             Enemy1.Add(new EnemyType1(new Vector2(1600, 400), enemyTex, playerPos));
             Enemy1.Add(new EnemyType1(new Vector2(4000, 400), enemyTex, playerPos));
             
@@ -125,8 +137,19 @@ namespace DesignSpel2015
 
             prevKs = ks;
             ks = Keyboard.GetState();
-            
+
+            civTimer--;
+            shotTimerReg--; 
+            punchTimer--;
+            if (camera.shake)
+            {
+                shakeTimer--;
+                if (shakeTimer <= 0) camera.shake = false;
+            }
             //movement
+            if (ks.IsKeyDown(Keys.W) || ks.IsKeyDown(Keys.A) || ks.IsKeyDown(Keys.S) || ks.IsKeyDown(Keys.D)) movement = true;
+            else movement = false;
+
             if (ks.IsKeyDown(Keys.W) && playerPos.Y >= 305)
             {
                 smoke.Add(new Smoke(new Vector2(playerPos.X - smokeTex.Width + 10, playerPos.Y + playerTex.Height - smokeTex.Height), smokeTex));
@@ -151,14 +174,18 @@ namespace DesignSpel2015
                 smoke.Add(new Smoke(new Vector2(playerPos.X - smokeTex.Width + 5, playerPos.Y + playerTex.Height - smokeTex.Height + 5), smokeTex));
                 playerPos.X += HSpeed;
             }
+            if (ks.IsKeyDown(Keys.LeftShift) && ks.IsKeyUp(Keys.LeftShift) && graphics.IsFullScreen == false) graphics.IsFullScreen = true;
+            if (ks.IsKeyDown(Keys.LeftShift) && ks.IsKeyUp(Keys.LeftShift) && graphics.IsFullScreen == true) graphics.IsFullScreen = false;
             // combat
-            shotTimerReg--; 
-            punchTimer--;
+
             if (ks.IsKeyDown(Keys.J) && shotTimerReg < 0 && reload1 == false && Mag1 >= 1)
             {
                 Bullet1.Add(new BulletReg(new Vector2(playerPos.X + playerTex.Width, playerPos.Y + playerTex.Height/2), bullet1Tex));
+                camera.shake = true;
                 shotTimerReg = 10;
+                shakeTimer = 10;
                 Mag1--;
+                shotReg.Play();
             }
             if (Ammo == 0)
             {
@@ -186,7 +213,8 @@ namespace DesignSpel2015
             }
             if (ks.IsKeyDown(Keys.K) && prevKs.IsKeyUp(Keys.K) && punchTimer <= 0)
             {
-                punch.Add(new Punch(new Vector2( playerPos.X + playerTex.Width + 16, playerPos.Y + (playerTex.Height /2) + 32), pt));
+                punch.Add(new Punch(new Vector2( playerPos.X + playerTex.Width + 16, playerPos.Y + (playerTex.Height /2) + 32), pTex));
+                SwingSound.Play();
                 punchTimer = 25;
             }
 
@@ -204,11 +232,10 @@ namespace DesignSpel2015
                 }
             }
 
-            
-
             for (int i = 0; i < Enemy1.Count; i++)
             {
                 Enemy1[i].update();
+                Enemy1[i].playerPos = this.playerPos;
                 if (Enemy1[i].enemyHp < 1)
                 {
                     score += 100;
@@ -223,7 +250,7 @@ namespace DesignSpel2015
                     {
                         Enemy1[i].enemyHp--;
                         Bullet1.RemoveAt(j);
-                        break;
+                        //break;
                     }
                 }
                 for (int j = 0; j < punch.Count; j++)
@@ -232,7 +259,8 @@ namespace DesignSpel2015
                     {
                         Enemy1[i].stunned = true;
                         Enemy1[i].stunTime = 5;
-                        if (Enemy1[i].enemyHp >= 0) Enemy1[i].enemyHp -= 5;
+                        HitSound.Play();
+                        if (Enemy1[i].enemyHp >= 0) Enemy1[i].enemyHp -= 1;
                         punch[j].timer = 3;
                         punch.RemoveAt(j);
                     }
@@ -250,7 +278,7 @@ namespace DesignSpel2015
                 if (smoke[i].timer <= 0) smoke.RemoveAt(i);
             }
             camera.Update(gameTime, this);
-            camera.shake = true;
+            
             base.Update(gameTime);
         }
 
@@ -285,7 +313,7 @@ namespace DesignSpel2015
             {
                 punch[i].draw(spriteBatch);
             }
-            spriteBatch.DrawString(GameFont, "Ammo: " + Mag1 + ": " + Ammo, new Vector2(10 + camera.centre.X, 70), Color.Red);
+            spriteBatch.DrawString(GameFont, "Ammo: " + Mag1 + ": " + Ammo / 8, new Vector2(10 + camera.centre.X, 70), Color.Red);
             spriteBatch.DrawString(GameFont, "Score: " + score, new Vector2(10 + camera.centre.X, 92), Color.Red);
             
             if (reload1 == true && Ammo >= 0) spriteBatch.DrawString(GameFont, "Reloading: " + reloadTime1, new Vector2(playerPos.X + 32, playerPos.Y - 32), Color.Red);

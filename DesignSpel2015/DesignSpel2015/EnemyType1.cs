@@ -13,11 +13,7 @@ namespace DesignSpel2015
 {
     class EnemyType1
     {
-        public Vector2 pos
-        {
-            get;
-            set;
-        }
+        public Vector2 pos;
         public Vector2 playerPos
         {
             get;
@@ -31,7 +27,7 @@ namespace DesignSpel2015
         }
         public bool hit = false;
         public int Espeed;
-        public int enemyHp = 50;
+        public float enemyHp = 5;
         public bool Activated = false;
         public bool burned = false;
         public int burnTime = 50;
@@ -53,7 +49,8 @@ namespace DesignSpel2015
         }
 
         public void update()
-        {
+        {   
+            
             this.eR = new Rectangle(
             (int)pos.X,
             (int)pos.Y,
@@ -65,6 +62,8 @@ namespace DesignSpel2015
             if (Activated == true && stunned == false)
             {
                 
+                pos.X -= (float)(3* Math.Sin(direction));
+                pos.Y -= (float)(5* Math.Cos(direction));
             }
             if (stunned == true)
             {
@@ -80,7 +79,7 @@ namespace DesignSpel2015
                 if (burnFreq <= 0)
                 {
                     enemyHp--;
-                    burnFreq = 5;
+                    burnFreq = 10;
                 }
                 burnTime--;
                 if (burnTime <= 0) 

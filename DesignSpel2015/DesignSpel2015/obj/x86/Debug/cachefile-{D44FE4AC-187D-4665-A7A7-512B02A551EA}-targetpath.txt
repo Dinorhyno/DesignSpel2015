@@ -6,3 +6,8 @@ Content\EnemyBox.xnb
 Content\smoke.xnb
 Content\hitBox.xnb
 Content\Hpbar.xnb
+Content\shotReg.xnb
+Content\Swing.xnb
+Content\Punch.xnb
+Content\swag.xnb
+Content\Char(Still).xnb
